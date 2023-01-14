@@ -1,0 +1,30 @@
+h1{
+  font-family: 'Nunito', sans-serif;
+
+
+  // CSS
+  color: #000000;
+  background-image: -webkit-linear-gradient(0deg, #000000 0%, #0069CA 0%, #8C19D2 20%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+
+}
+
+button{
+  background: #8C19D2;
+}
+
+.box-search{
+  input{
+    width: 100%;
+  }
+  button{
+    min-width: 120px
+  }
+}
+
+.content{
+  height: 100vh;
+}
