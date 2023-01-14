@@ -4,12 +4,14 @@ h1{
 
   // CSS
   color: #000000;
-  background-image: -webkit-linear-gradient(0deg, #000000 0%, #0069CA 0%, #8C19D2 20%);
+  background-image: -webkit-linear-gradient(0deg, #000000 0%, #0069CA 0%, #8C19D2 62%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-
+  font-size: 5rem;
+  margin-bottom: 3.5rem;
+  margin-left: 3rem;
 }
 
 button{
