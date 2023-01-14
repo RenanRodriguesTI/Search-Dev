@@ -16,7 +16,8 @@ const routes: Routes = [{
   },
   {
     path:'results',
-    component:ResultsComponent
+    component:ResultsComponent,
+    loadChildren: () => import("./pages/results/results.module").then((m) => m.ResultsModule)
   }
 ];
 
