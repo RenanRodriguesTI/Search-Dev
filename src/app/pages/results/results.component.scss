@@ -1,3 +1,21 @@
+h1.degrade{
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  color: #000000;
+  background-image: -webkit-linear-gradient(0deg, #000000 0%, #0069CA 0%, #8C19D2 62%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+  margin-left: 3rem;
+}
+
+input.search{
+    border: 1px solid #8C19D2;
+}
+
 p-card{
 
   .header{
