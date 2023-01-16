@@ -4,10 +4,10 @@ Esse projeto foi gerado usando [Angular CLI](https://github.com/angular/angular-
 
 ## Resumo 
 
-- O projeto demonsta o uso do framework angular em javascript
-- Foi utilizado o framework bootstrap para ajudar na formulação do layout com as grids
-- Para componentes prontos foi utilizado o PrimeNg facilitar a criação do layout e avaliar a eficiencia do seu uso
-- Foram criados componentes para deixar o código menor e para futuras reutilização   
+- O projeto demonsta o uso do framework angular em javascript.
+- Foi utilizado o framework bootstrap para ajudar na formulação do layout com as grids.
+- Para componentes prontos foi utilizado o PrimeNg facilitar a criação do layout e avaliar a eficiência do seu uso.
+- Foram criados componentes para deixar o código menor e para futuras reutilização.   
 
 
 ## Development server
@@ -29,4 +29,4 @@ Para deploy da aplicação use `npm run deploy`. Esse comando irá funcionar par
 
 ## Url Production
 
-Sistema foi hospedado na seguinte url `https://searchdev-347c8.web.app`
+Sistema foi hospedado na seguinte url `https://searchdev-347c8.web.app`.
