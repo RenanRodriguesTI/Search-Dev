@@ -9,8 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { HttpClientModule } from '@angular/common/http';
-import { LoadingService } from '@services/loading.service';
-import { LoadingComponent } from './shared/components/loading/loading.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyChZoHh2OPRYkim2cwR2JUd-pKpV61873E",
@@ -25,8 +23,7 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoadingComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +36,7 @@ const firebaseConfig = {
     NgbModule,
   ],
   exports:[],
-  providers: [
-    LoadingService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

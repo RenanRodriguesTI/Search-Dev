@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoadingService } from '@services/loading.service';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +10,7 @@ export class HomeComponent implements OnInit {
 
   input: string ='';
 
-  constructor(private router: Router,  private loadingService: LoadingService){
-    this.loadingService.stop();
+  constructor(private router: Router){
   }
   ngOnInit(): void {
   }
