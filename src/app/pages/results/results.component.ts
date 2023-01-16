@@ -59,6 +59,7 @@ export class ResultsComponent implements OnInit {
     }
 
     this.loading = true;
+    this.repositories = new Array(8);
     await this.gitService.searchUser(this.input).then(res => {
       this.user = res;
     }).catch(()=> this.user = null);
