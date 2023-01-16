@@ -1,0 +1,51 @@
+.header {
+  h3 {
+    // font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  img{
+    max-width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.body {
+  p {
+    font-size: 1rem;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+  }
+}
+
+ul {
+  word-break: break-word;
+
+  li {
+    margin-bottom: 0.7rem;
+
+    i {
+      font-size: 23px;
+      margin-right: 0.5rem;
+    }
+
+    img {
+      width: 24px;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.btn-contact {
+  background: #8C19D2
+}
+
+.btn-contact:hover {
+  background: #7158e2
+}

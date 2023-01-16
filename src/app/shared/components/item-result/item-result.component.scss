@@ -1,0 +1,36 @@
+.item{
+  border: 1px solid #ecf0f1;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  .title{
+    font-size: 20px;
+    color:#171923;
+  }
+
+  p{
+    color: #4A5568;
+  }
+
+}
+
+a{
+  text-decoration: none;
+}
+
+.item.skeleton{
+  p{
+    margin-bottom: 8px;
+  }
+}
+
+.point{
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4A5568;
+}
+

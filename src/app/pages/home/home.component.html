@@ -8,9 +8,9 @@
       <form class="d-flex justify-content-center">
         <span class="w-100 p-input-icon-left me-2">
           <i class="pi pi-search"></i>
-          <input type="text" class="p-inputtext-sm" pInputText placeholder="Search">
+          <input type="text" [(ngModel)]="input" class="p-inputtext-sm" [ngModelOptions]="{standalone: true}" pInputText placeholder="Search" />
         </span>
-        <button (click)="send()" pButton type="button" label="Search" class="p-button-sm" ></button>
+        <button (click)="send()" [disabled]="!input" pButton type="button" label="Search" class="p-button-sm" ></button>
       </form>
     </div>
   </div>

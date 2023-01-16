@@ -1,0 +1,34 @@
+export class User {
+  login?: any;
+  id?: any;
+  node_id?: any;
+  avatar_url?: any;
+  gravatar_id?: any;
+  url?: any;
+  html_url?: any;
+  followers_url?: any;
+  following_url?: any;
+  gists_url?: any;
+  starred_url?: any;
+  subscriptions_url?: any;
+  organizations_url?: any;
+  repos_url?: any;
+  events_url?: any;
+  received_events_url?: any;
+  type?: any;
+  site_admin?: any;
+  name?: any;
+  company?: any;
+  blog?: any;
+  location?: any;
+  email?: any;
+  hireable?: any;
+  bio?: any;
+  twitter_username?: any;
+  public_repos?: any;
+  public_gists?: any;
+  followers?: any;
+  following?: any;
+  created_at?: any;
+  updated_at?: any;
+}
