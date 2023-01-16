@@ -6,6 +6,7 @@
 
   p {
     font-size: 0.85rem;
+    color: #4A5568;
   }
 
   img{
@@ -17,10 +18,14 @@
 .body {
   p {
     font-size: 1rem;
+    color: #4A5568;
   }
 
   ul {
     margin-top: 0.5rem;
+    li{
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -29,7 +34,7 @@ ul {
 
   li {
     margin-bottom: 0.7rem;
-
+    font-size: 0.9rem;
     i {
       font-size: 23px;
       margin-right: 0.5rem;
@@ -48,4 +53,9 @@ ul {
 
 .btn-contact:hover {
   background: #7158e2
+}
+
+a{
+  color: #4A5568;
+  text-decoration: none;
 }

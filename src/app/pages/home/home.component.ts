@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   send(){
-      this.router.navigate(['/results'],{state:{search:this.input}});
+      this.router.navigate(['/results'],{state:{search:this.input.trim()}});
   }
 }

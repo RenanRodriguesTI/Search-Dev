@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Repository } from '@models/repository';
 import { User } from '@models/user';
 import { GitService } from '@services/git.service';
-import { LoadingService } from '@services/loading.service';
 import { map } from 'rxjs';
 
 @Component({
@@ -22,8 +21,7 @@ export class ResultsComponent implements OnInit {
 
   constructor(
     private gitService: GitService,
-    private activatedRoute: ActivatedRoute,
-    private loadingService: LoadingService
+    private activatedRoute: ActivatedRoute
   ) {
   }
 
@@ -32,7 +30,7 @@ export class ResultsComponent implements OnInit {
     const ws = (ms: number)=> new Promise((resolve) => setTimeout(() => resolve(true),ms));
     this.activatedRoute.paramMap.pipe(map(() => window.history.state)).subscribe(async(state) =>{
       const {search} = state;
-      this.input = search;
+      this.input = !search || search.trim();
       this.loading = true;
 
       if(!search){
@@ -40,11 +38,11 @@ export class ResultsComponent implements OnInit {
         return;
       }
 
-      await this.gitService.searchUser(search).then(res => {
+      await this.gitService.searchUser(this.input).then(res => {
         this.user = res;
       }).catch(()=> this.user = null);
 
-      await this.gitService.searchUserRepositories(search).then(res => {
+      await this.gitService.searchUserRepositories(this.input).then(res => {
         this.repositories = res.sort((a,b) => b?.stargazers_count - a?.stargazers_count);
       }).catch(()=>this.repositories = []);
       await ws(200);
@@ -53,7 +51,7 @@ export class ResultsComponent implements OnInit {
   }
 
   async search(){
-
+    this.input = this.input.trim();
     if(!this.input){
       return;
     }

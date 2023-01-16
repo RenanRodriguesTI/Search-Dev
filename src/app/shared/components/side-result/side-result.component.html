@@ -6,7 +6,11 @@
     </div>
     <div class="col-9 ps-3">
       <h3>{{user.name || user.login |titlecase}}</h3>
-      <p *ngIf="user.twitter_username">@{{user.twitter_username}}</p>
+      <p *ngIf="user.twitter_username">
+        <a href="https://twitter.com/{{user.twitter_username}}" target="_blank">
+          @{{user.twitter_username}}
+        </a>
+      </p>
     </div>
   </div>
 
@@ -21,11 +25,28 @@
   <ng-template pTemplate="footer">
     <ul class="p-0">
 
-      <li  class="d-flex align-items-center" *ngIf="user.company">  <img src="../../../assets/home.svg" /> <p class="ps-1 m-0">{{user.company}}</p></li>
-      <li  class="d-flex align-items-center" *ngIf="user.location"> <img src="../../../assets/gps.svg" /> <p class="ps-1 m-0">{{user.location}}</p></li>
-      <li  class="d-flex align-items-center" *ngIf="user.email"> <i class="pi pi-envelope"></i> <p class="ps-1 m-0">{{user.email}}</p></li>
-      <li  class="d-flex align-items-center" *ngIf="user.url"> <img src="../../../assets/link-angle-right.svg" /> <p class="ps-1 m-0">{{user.url}}</p></li>
-      <li  class="d-flex align-items-center"  *ngIf="user.twitter_username"> <i class="pi pi-twitter"></i> <p class="ps-1 m-0">@{{user.twitter_username}}</p></li>
+      <li  class="d-flex align-items-center" *ngIf="user.company">
+        <img src="../../../assets/home.svg" /> <p class="ps-1 m-0">{{user.company}}</p>
+      </li>
+      <li  class="d-flex align-items-center" *ngIf="user.location">
+        <img src="../../../assets/gps.svg" />
+        <p class="ps-1 m-0">{{user.location}}</p></li>
+      <li  class="d-flex align-items-center" *ngIf="user.email">
+        <i class="pi pi-envelope"></i>
+        <p class="ps-1 m-0">{{user.email}}</p>
+      </li>
+      <li  class="d-flex align-items-center" *ngIf="user.blog">
+        <a class="d-flex align-items-center" [href]="user.blog" target="_blank"><img src="../../../assets/link-angle-right.svg" />
+          <p class="ps-1 m-0">{{user.blog}}</p></a>
+      </li>
+      <li  class="d-flex align-items-center"  *ngIf="user.twitter_username">
+        <i class="pi pi-twitter"></i>
+        <p class="ps-1 m-0">
+          <a href="https://twitter.com/{{user.twitter_username}}" target="_blank">
+            @{{user.twitter_username}}
+          </a>
+        </p>
+      </li>
     </ul>
   </ng-template>
 </p-card>

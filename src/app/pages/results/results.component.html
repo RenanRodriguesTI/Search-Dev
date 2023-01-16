@@ -19,11 +19,11 @@
         <app-side-result [loading]="loading" [user]="user"></app-side-result>
     </div>
 
-    <div class="col-8 repositories-list" *ngIf="repositories.length > 0">
+    <div class="col-8 repositories-list" *ngIf="repositories.length > 0 || loading">
         <app-item-result [loading]="loading" [repository]="repository" *ngFor="let repository of repositories" ></app-item-result>
     </div>
 
-    <div class="col-8" *ngIf="repositories.length === 0">
+    <div class="col-8" *ngIf="repositories.length === 0 && !loading">
       <app-not-found></app-not-found>
     </div>
   </div>
