@@ -14,10 +14,11 @@ import { map } from 'rxjs';
 
 export class ResultsComponent implements OnInit {
 
-  user: User = new User();
+  user: User|null = new User();
   repositories: Repository[] = new Array(8);
   input = '';
   loading = false;
+  notfound = false;
 
   constructor(
     private gitService: GitService,
@@ -35,16 +36,17 @@ export class ResultsComponent implements OnInit {
       this.loading = true;
 
       if(!search){
+        this.loading = false;
         return;
       }
 
       await this.gitService.searchUser(search).then(res => {
         this.user = res;
-      });
+      }).catch(()=> this.user = null);
 
       await this.gitService.searchUserRepositories(search).then(res => {
         this.repositories = res.sort((a,b) => b?.stargazers_count - a?.stargazers_count);
-      });
+      }).catch(()=>this.repositories = []);
       await ws(200);
       this.loading = false;
     });
@@ -52,14 +54,18 @@ export class ResultsComponent implements OnInit {
 
   async search(){
 
+    if(!this.input){
+      return;
+    }
+
     this.loading = true;
     await this.gitService.searchUser(this.input).then(res => {
       this.user = res;
-    });
+    }).catch(()=> this.user = null);
 
     await this.gitService.searchUserRepositories(this.input).then(res => {
       this.repositories = res.sort((a,b) => b?.stargazers_count - a?.stargazers_count);
-    });
+    }).catch(()=> this.repositories = []);;
     this.loading = false;
   }
 
