@@ -30,11 +30,13 @@ export class ResultsComponent implements OnInit {
     const ws = (ms: number)=> new Promise((resolve) => setTimeout(() => resolve(true),ms));
     this.activatedRoute.paramMap.pipe(map(() => window.history.state)).subscribe(async(state) =>{
       const {search} = state;
-      this.input = !search || search.trim();
+      this.input = search ?  search.trim() : null;
       this.loading = true;
 
       if(!search){
         this.loading = false;
+        this.repositories = [];
+        this.user = null;
         return;
       }
 
